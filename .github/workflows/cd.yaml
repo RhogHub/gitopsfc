@@ -29,12 +29,12 @@ jobs:
     - name: Update Kubernetes resoures 
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      run: 
+      run: |
         cd k8s 
         kustomize edit set image goserver=$DOCKER_USERNAME/gitopsfc:$GITHUB_SHA
 
     - name: Commit
-      run:
+      run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -am "Bump docker version"
