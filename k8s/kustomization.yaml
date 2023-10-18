@@ -7,5 +7,5 @@ resources:
 
 images: 
 - name: goserver
-  newName: rhogHub/gitopsfc
-  newTag: netTag
+  newName: rhoghub/gitopsfc
+  newTag: newTag
